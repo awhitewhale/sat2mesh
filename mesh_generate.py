@@ -27,14 +27,14 @@ def calculate_new_longitude_(lon, lat, distance=111.32):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Generate mesh from lat/lon')
-    parser.add_argument('-lat', type=float, default=float(22.316), help='Latitude')
-    parser.add_argument('-lon', type=float, default=float(114.174), help='Longitude')
+    parser.add_argument('-lat', type=float, default=float(22.315), help='Latitude')
+    parser.add_argument('-lon', type=float, default=float(114.173), help='Longitude')
     args = parser.parse_args()
 
     root_path = Path(__file__).resolve().parent
     sys.path.append(root_path)
     addon_name = "blosm"
-    addon_zip_path = os.path.join(root_path, "blosm_2.7.15.zip")
+    addon_zip_path = os.path.join(root_path, "utils","addon.zip")
     bpy.ops.preferences.addon_install(filepath=addon_zip_path)
     bpy.ops.preferences.addon_enable(module="blosm")
     bpy.ops.wm.save_userpref()
@@ -45,8 +45,8 @@ if __name__ == "__main__":
         preferences.googleMapsApiKey = 'AIzaSyA8C9_h4ZqzKWDRJNNG3677SYaZgZ9XSWg'
         bpy.ops.wm.save_userpref()
     bpy.data.scenes["Scene"].blosm.dataType = '3d-tiles'
-    lat_step = args.lat
-    lon_step = args.lon
+    lat_step = float(args.lat)
+    lon_step = float(args.lon)
     maxlat = lat_step + 0.002
     maxlat_ = lat_step + 0.001
     minlat = lat_step
@@ -63,11 +63,11 @@ if __name__ == "__main__":
     sources = ['google', 'tianditu', 'arcgisonline', 'amap']
     for source in sources:
         getpic(minlon, maxlat, maxlon, minlat, 18, source=source, style='s',
-                outfile=os.path.join(root_path, 'output', 'lat{:.3f}_lon{:.3f}_{}.tif'.format(minlat, minlon, source)))
+                outfile=os.path.join(root_path, 'output', '{}.tif'.format(source)))
 
     bpy.context.scene.blosm.dataType = '3d-tiles'
     bpy.context.scene.blosm.lodOf3dTiles = 'lod6'
     bpy.ops.blosm.import_data()
     bpy.ops.object.select_by_type(type='MESH')
-    bpy.ops.export_scene.gltf(filepath=os.path.join(root_path, 'output', 'lat{:.3f}_lon{:.3f}.glb'.format(minlat, minlon)))
+    bpy.ops.export_scene.gltf(filepath=os.path.join(root_path, 'output', 'sat2mesh_output.glb'))
     bpy.ops.object.delete()
