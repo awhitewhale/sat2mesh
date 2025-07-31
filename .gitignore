@@ -206,7 +206,7 @@ marimo/_static/
 marimo/_lsp/
 __marimo__/
 
-*.png
+output/
 *.tif
 *.glb
 Blender Foundation.zip
