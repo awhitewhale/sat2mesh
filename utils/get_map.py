@@ -252,7 +252,7 @@ def getpic(x1, y1, x2, y2, z, source='google', outfile="MAP_OUT.png", style='s')
     leny = pos2y - pos1y + 1
 
     urls = [geturl(source, i, j, z, style,) for j in range(pos1y, pos1y + leny) for i in range(pos1x, pos1x + lenx)]
-
+    
     datas = downpics(urls)
 
     outpic = pil.new('RGBA', (lenx * 256, leny * 256))

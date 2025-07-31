@@ -61,9 +61,19 @@ if __name__ == "__main__":
     bpy.context.view_layer.update()
 
     sources = ['google', 'tianditu', 'arcgisonline', 'amap']
+
     for source in sources:
-        getpic(minlon, maxlat, maxlon, minlat, 18, source=source, style='s',
-                outfile=os.path.join(root_path, 'output', '{}.tif'.format(source)))
+        try:
+            getpic(
+                minlon, maxlat, maxlon, minlat, 18,
+                source=source, style='s',
+                outfile=os.path.join(root_path, 'output', f'{source}.tif')
+            )
+        except Exception as e:
+            if 'Bad network link' in str(e):
+                print(f"[Network Error] Cannot connect to {source}. The resulting mesh may be incomplete or inaccurate.")
+            else:
+                print(f"[Error] Failed to process source '{source}': {e}")
 
     bpy.context.scene.blosm.dataType = '3d-tiles'
     bpy.context.scene.blosm.lodOf3dTiles = 'lod6'

@@ -6,12 +6,6 @@ from pathlib import Path
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Generate multi-view')
-    parser.add_argument('-lat', type=float, default=float(22.315), help='Latitude')
-    parser.add_argument('-lon', type=float, default=float(114.173), help='Longitude')
-    args = parser.parse_args()
-    lat = float(args.lat)
-    lon = float(args.lon)
     output_dir = Path("output")
     glb_file = output_dir / f"sat2mesh_output.glb"
 

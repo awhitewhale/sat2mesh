@@ -21,26 +21,28 @@ if not st.session_state.generating:
     if st.button("Use Sat2Mesh to Generate Mesh"):
         st.session_state.generating = True
         st.rerun()
-print("Running subprocess...")
+# print("Running subprocess...")
 # 如果点击了按钮，开始生成
 if st.session_state.generating and not st.session_state.generated:
-    with st.spinner("Generating... This may take 1-5 minutes. It took avg 3min 46s 31ms for me."):
+    with st.spinner("Generating... This may take 5-10 minutes. It took avg 7min 47s 21ms for me."):
         try:
             result = subprocess.check_output(
                 ["python", "mesh_generate.py", "-lat", str(lat), "-lon", str(lon)],
                 stderr=subprocess.STDOUT
             )
         except subprocess.CalledProcessError as e:
+            
+            # st.code(e.output.decode(errors="replace"), language="bash")
             pass
-            # st.code(e.output.decode(), language="bash")
         try:
             result1 = subprocess.check_output(
                 ["python", "gen_view.py"],
                 stderr=subprocess.STDOUT
             )
         except subprocess.CalledProcessError as e:
+            
+            # st.code(e.output.decode(errors="replace"), language="bash")
             pass
-            # st.code(e.output.decode(), language="bash")
         st.session_state.generated = True
         st.session_state.generating = False
 
