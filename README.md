@@ -44,11 +44,15 @@ You can try Sat2Mesh online via Hugging Face Spaces:
   📥 [Download from OneDrive](https://1drv.ms/f/c/bb3d431e33a5aa64/Euszx4QVIxlKn_IBtol-QDYBsziOIRN1KC1ZWBIhXz1qJA?e=VChtDT)
 
 - **Rendered Multi-view Satellite Images 106 GB**  
-  🔜 *Coming soon*
+  📥 [Download from OneDrive (Due to OneDrive sharing restrictions, the upload has not started as of 21:00 UTC+8.)](#)
 
-- 🧪 **Demo Subset (100 samples)**  
+  📥 [Download from Quark Netdisk (Still uploading, not fully uploaded as of 21:00 UTC+8.)](https://pan.quark.cn/s/65a49ad76a6f?pwd=NPVV)
+
+
+
+- 🧪 **Demo Subset 1.25 GB (40 samples)**  
   A small-scale version for quick testing and exploration  
-  📥 [Download via OneDrive](#)
+  📥 [Download from OneDrive](https://1drv.ms/f/c/bb3d431e33a5aa64/EqYeFp3gVVZDrCpTpjU6UEkB-J1Su5NEfSsbiNfNHNnQyA?e=oX7hxr)
 
 ## 🛠️ Features
 - End-to-end triangle mesh reconstruction from real satellite images
