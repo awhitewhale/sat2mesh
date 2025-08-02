@@ -66,3 +66,8 @@ You can try Sat2Mesh online via Hugging Face Spaces:
 - Training and inference scripts provided
 
 - Compatible with Sat2Mesh-7K dataset
+
+## 👤 About the Author
+
+This project is developed and maintained by Yifan Liu,
+🔗 [More about the author](https://awhitewhale.github.io/liuyifan/).
