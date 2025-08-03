@@ -44,9 +44,9 @@ You can try Sat2Mesh online via Hugging Face Spaces:
   📥 [Download from OneDrive](https://1drv.ms/f/c/bb3d431e33a5aa64/Euszx4QVIxlKn_IBtol-QDYBsziOIRN1KC1ZWBIhXz1qJA?e=VChtDT)
 
 - **Rendered Multi-view Satellite Images 106 GB**  
-  📥 [Download from OneDrive (Due to OneDrive sharing restrictions, the upload has not started as of 21:00 UTC+8.)](#)
+  📥 [Download from OneDrive](https://1drv.ms/u/c/bb3d431e33a5aa64/EWYcEOoSMc9FpCJYm-e_ejkBzZPv6H734OCKvpyr3clsvw?e=5yBbB8)
 
-  📥 [Download from Quark Netdisk (Still uploading, not fully uploaded as of 21:00 UTC+8.)](https://pan.quark.cn/s/65a49ad76a6f?pwd=NPVV)
+  📥 [Download from Quark Netdisk](https://pan.quark.cn/s/65a49ad76a6f?pwd=NPVV)
 
 
 
